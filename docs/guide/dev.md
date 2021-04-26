@@ -149,9 +149,9 @@ Tomcat started.
 
 `http://localhost:8080/`
 
-![start-tomcat](../images/start-tomcat.png)
+![start-tomcat](images/start-tomcat.png)
 
-## Apache
+# Apache
 
 ```
 $ httpd -v
@@ -191,13 +191,13 @@ vi /etc/httpd/conf.d/proxy_ajp.conf
 $ pwd
 /private/var/log/apache2
 
-## Deploy
+# Deploy
 
-## Setup
+# Setup
 
 localhost:8080/time4/pub/common/html/setup.html
 
-![mosp-setup](../images/mosp_setup1.png)
+![mosp-setup](images/mosp_setup1.png)
 
 
 `psql -U postgres mospv4`
@@ -256,7 +256,7 @@ jingnoMacBook-ea:mumo jinghuizhen$ sudo kill 19621
 
 
 
-## やり直し
+# やり直し
 
 ```
 $ psql -l
@@ -267,7 +267,7 @@ $ psql -l
  postgres   | jinghuizhen | UTF8     | C       | C     | 
 ```
 
-## ユーザに権限を付与
+# 権限を付与
 
 ```
 $ psql -d postgres -U jinghuizhen
@@ -298,51 +298,3 @@ postgres=# select rolname, rolsuper, rolcanlogin from pg_roles;
 
 postgres=# 
 ```
-
-# 運用
-
-## ログイン
-
-http://localhost:8080/time4/srv/
-
-ユーザ：10001
-
-パスワード：a12345
-
-## 所属マスタの設定
-
-[基本設定]→[所属マスタ]
-
-所属マスタでは、社員に紐付く所属(部署など)及びその階層を設定します。
-
-![master-registor](../images/master-registor.png)
-
-## 職位マスタの設定
-
-[基本設定]→[職位マスタ]
-
-職位マスタでは、社員に紐付く職位や職位ランクを設定します。
-
-![rank-registor](../images/rank-registor.png)
-
-## 雇用契約マスタの設定
-
-[基本設定]-[雇用契約マスタ]
-
-![hire-registor](../images/hire-registor.png)
-
-## 勤務地マスタの設定
-[基本設定]→[勤務地マスタ]
-
-![hire-registor](../images/kinmu-registor.png)
-
-## 社員登録
-
-![new-employee](../images/new-employee.png)
-
-## アカウントマスタの設定
-
-![new-employee](../images/account-master.png)
-
-アカウントマスタでは、アカウント(ユーザ ID)の設定を行います。 アカウントを設定することで、社員のログインが可能になります。
-
